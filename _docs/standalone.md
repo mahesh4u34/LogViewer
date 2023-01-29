@@ -20,7 +20,7 @@ format.
 #### List of available log files
 
 A list of available log files are defined in `logs = [ ... ]` section of the configuration file. The default configuration
-gives access to all files with ".log" extension:
+gives access to all files with ".xml" extension:
 ```hocon
 logs = [
   {
@@ -54,7 +54,7 @@ ${HOME} will be replaced with the environment variable "HOME", it is a feature o
 LogViewer detects the format of log files automatically. If the format cannot be detected automatically or if you want specify
 the format more detailed, you can add `format` section beside `path` definition.
 
-In the following example all files with ".log" extension in `${HOME}"/my-app/logs` directory will be parsed as Log4J generated logs
+In the following example all files with ".xml" extension in `${HOME}"/my-app/logs` directory will be parsed as Log4J generated logs
 with pattern `%date{yyyy-MM-dd_HH:mm:ss.SSS} [%thread] %-5level %logger{35} - %msg%n`  
 ```hocon
 logs = [

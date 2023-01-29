@@ -277,8 +277,8 @@ public class LogViewController extends AbstractRestRequestHandler {
             }
 
             if (res.containsKey(fileName)) {
-                if (fileName.toLowerCase().endsWith(".log")) {
-                    fileName = fileName.substring(0, fileName.length() - ".log".length()) + "." + log.getId() + ".log";
+                if (fileName.toLowerCase().endsWith(".xml")) {
+                    fileName = fileName.substring(0, fileName.length() - ".xml".length()) + "." + log.getId() + ".xml";
                 } else {
                     fileName = fileName + '-' + log.getId();
                 }

@@ -111,7 +111,7 @@ public class TestUtils {
             List<String> res = new ArrayList<>();
 
             for (Map.Entry<String, StringBuilder> entry : builderMap.entrySet()) {
-                File f = File.createTempFile("log-viewer/test/" + entry.getKey() + "-", ".log");
+                File f = File.createTempFile("log-viewer/test/" + entry.getKey() + "-", ".xml");
                 f.deleteOnExit();
                 res.add(f.getPath());
 

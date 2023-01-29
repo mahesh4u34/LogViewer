@@ -3,7 +3,7 @@ Configuration is located in `log-viewer-1.0.4/config.conf`, the file has [HOCON]
 ### List of available log files
 
 A list of available log files are defined in `logs = [ ... ]` section of the configuration file. The default configuration
-gives access to all files with ".log" extension:
+gives access to all files with ".xml" extension:
 ```hocon
 logs = [
   {
@@ -88,7 +88,7 @@ Note: `node-cn-01`, `node-cn-02` and `node-cn-03` must have running Log-Viewer i
 LogViewer detects the format of log files automatically. If the format cannot be detected automatically or if you want to specify
 the format more detailed, you can add `format` section beside `path` definition.
 
-In the following example all files with ".log" extension in `${HOME}"/my-app/logs` directory will be parsed as Log4J generated logs
+In the following example all files with ".xml" extension in `${HOME}"/my-app/logs` directory will be parsed as Log4J generated logs
 with pattern `%date{yyyy-MM-dd_HH:mm:ss.SSS} [%thread] %-5level %logger{35} - %msg%n`  
 ```hocon
 logs = [

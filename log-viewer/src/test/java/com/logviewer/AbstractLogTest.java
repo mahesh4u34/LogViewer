@@ -133,7 +133,7 @@ public abstract class AbstractLogTest {
     }
 
     protected String getTestClassLog() {
-        String testFilePath = "/testdata/" + testClassName() + ".log";
+        String testFilePath = "/testdata/" + testClassName() + ".xml";
         URL url = AbstractLogTest.class.getResource(testFilePath);
 
         if (url == null) {
@@ -174,7 +174,7 @@ public abstract class AbstractLogTest {
      * after finish test.
      */
     protected Path createTempFile() throws IOException {
-        Path res = Files.createTempFile("log-test-", ".log");
+        Path res = Files.createTempFile("log-test-", ".xml");
         tempFiles.add(res);
         return res;
     }
